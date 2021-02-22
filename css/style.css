@@ -15,11 +15,12 @@
 
 /* regole sidebar */
 #sidebar{
-  width: 300px;
+  width: 200px;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
+
   /* debug */
   background-color: grey;
 }
@@ -28,10 +29,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100% - 100px);
+  height: calc(100vh - 100px);
 }
 
 .container-flex-sidebar-item>div{
+  /* debug */
   border: 1px solid white;
   height: 50px;
 }
@@ -39,14 +41,14 @@
 
 /* regole generali main */
 main{
-  width: calc(100% - 300px);
-  margin-left: 300px;
-  margin-top: 100px;
+  width: calc(100% - 200px);
+  margin-left: 200px;
   margin-bottom: 100px;
-
+  padding-top: 100px;
+  overflow-y: scroll;
 
   /* debug */
-  background-color: red;
+  background-color:red;
 }
 
 
@@ -56,9 +58,9 @@ main{
   position: fixed;
   top: 0;
   height: 100px;
-  opacity: 0.7;
+  opacity: 0.5;
   background-color: #080B12;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -73,6 +75,7 @@ main{
   height: 100px;
   position: fixed;
   bottom: 0;
+  left:0;
   /* debug */
   background-color: blue;
 }
