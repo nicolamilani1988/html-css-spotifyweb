@@ -237,7 +237,7 @@ main .container-flex>.flex-item{
 
   /* debug */
   /* height: 150px; */
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 main .container-flex>.flex-item a{
@@ -276,6 +276,18 @@ main .content-pic>img{
 main .song-title{
   text-align: center;
   color: lightgrey;
+  margin-top: 10px;
+}
+
+main .song-title>p.small-text{
+  margin-top: 5px;
+  font-size: 85%;
+}
+
+#popular .content-pic img,
+#popular .content-pic .layover
+{
+  border-radius: 50%;
 }
 
 
