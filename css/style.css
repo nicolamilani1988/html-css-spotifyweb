@@ -43,7 +43,6 @@ h4{
   position: fixed;
   top: 0;
   left: 0;
-  overflow-y: auto;
   background-color:black;
 }
 
@@ -59,6 +58,11 @@ h4{
   display: flex;
   flex-direction: column;
 }
+
+#sidebar .container-flex>.flex-item:first-child{
+  overflow-y: auto;
+}
+
 
 #sidebar .container-flex>.flex-item:first-child>div:first-child img{
   width: 90%;
@@ -393,5 +397,15 @@ main .song-title>p.small-text{
   #upgrade a{
     right: 60px;
   }
+
+}
+
+/* media query height */
+@media all and (max-height: 350px){
+
+  #sidebar .container-flex>.flex-item:last-child{
+    overflow-y: auto;
+  }
+
 
 }
