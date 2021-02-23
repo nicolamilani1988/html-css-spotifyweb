@@ -33,9 +33,18 @@ h4{
   font-size: 1rem;
 }
 
+.text-bigger{
+  font-size: 1.5rem
+}
+
 .white-text{
   color: white;
 }
+
+.small-text{
+  font-size: 85%;
+}
+
 
 
 /* regole sidebar */
@@ -50,32 +59,31 @@ h4{
 #sidebar .container-flex{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: calc(100vh - 100px);
   padding: 10px 10px 10px 0;
 }
 
-#sidebar .flex-item{
-  display: flex;
-  flex-direction: column;
-}
-
-#sidebar .container-flex>.flex-item:first-child{
+#sidebar .container-flex>.flex-item:nth-child(3){
+  margin-top: 20px;
+  flex-grow: 1;
   overflow-y: auto;
 }
 
-
-#sidebar .container-flex>.flex-item:first-child>div:first-child img{
+#sidebar .container-flex>.flex-item:first-child img{
   width: 80%;
   margin: 0 0 20px 10px;
 }
 
-#sidebar .container-flex>.flex-item:first-child>div:nth-child(3){
-  margin-top: 20px;
+#sidebar .container-flex>.flex-item:nth-child(3)>.white-text.text-big,
+#sidebar hr{
+  margin-left: 10px;
 }
 
-#sidebar .container-flex>.flex-item:first-child>div:nth-child(3) .white-text.text-big{
-  margin-left: 10px;
+#sidebar .container-flex>.flex-item:nth-child(3) a i{
+  background-color: lightgrey;
+  padding: 10px;
+  margin-right: 5px;
+  color: black;
 }
 
 #sidebar .container-flex ul li{
@@ -96,19 +104,12 @@ h4{
   margin-right: 5px;
 }
 
-#sidebar .container-flex>.flex-item:first-child>div:nth-child(3) a i{
-  background-color: lightgrey;
-  padding: 10px;
-  margin-right: 5px;
-  color: black;
-}
-
 .sidebar-icon-small{
   width: 10%;
   margin-right: 5px;
 }
 
-#sidebar .container-flex>.flex-item:last-child>div:last-child>img{
+#sidebar .container-flex>.flex-item:nth-child(4)>.sidebar-item:last-child>img{
   background-color: lightgrey;
   width: 30px;
   height: 30px;
@@ -125,15 +126,18 @@ h4{
   border-left: 2px solid #C8FF00;
 }
 
+/* display:flex per posizionare logo nascosto con order: -1 */
+#sidebar .flex-item{
+  display: flex;
+  flex-direction: column;
+}
+
 .hidden-logo{
   display: none;
   order: -1;
   padding-left: 10px;
 }
 
-#sidebar hr{
-  margin-left: 10px;
-}
 
 
 /* regole generali main */
@@ -239,7 +243,6 @@ main .container-flex>.flex-item{
   flex-shrink: 1;
   margin-top: 20px;
   margin-right: 10px;
-
   /* debug */
   /* height: 150px; */
   /* border: 1px solid white; */
@@ -286,7 +289,6 @@ main .song-title{
 
 main .song-title>p.small-text{
   margin-top: 5px;
-  font-size: 85%;
 }
 
 #popular .content-pic img,
@@ -296,28 +298,85 @@ main .song-title>p.small-text{
 }
 
 
-
 /* regole player */
 #player{
-  width: 100%;
-  height: 100px;
+  right: 0;
   position: fixed;
   bottom: 0;
   left:0;
   background-color: #282828;
 }
 
-.container-flex-player{
+#player .container-flex{
   display: flex;
-  justify-content: space-between;
+  height: 100px;
+  padding: 20px;
 }
 
-.container-flex-player>div{
-  width: 100px;
-  height: 50px;
+#player .container-flex>.flex-item{
+  display: flex;
+  align-items: center;
+  /* debug */
+  /* width: 100px; */
+  /* height: 50px; */
   border: 1px solid red;
 }
 
+#player .container-flex>.flex-item:first-child{
+  flex-grow: 1;
+}
+
+#player .container-flex>.flex-item:nth-child(3){
+  flex-grow: 10;
+}
+
+#player .container-flex>.flex-item:first-child img{
+  width: 50px;
+  margin-right: 10px;
+}
+
+#player .container-flex>.flex-item:nth-child(2) a{
+  color: inherit;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+#player .container-flex>.flex-item:nth-child(3){
+  flex-direction: column;
+}
+
+#player .player-command button{
+  background-color: transparent;
+  border: none;
+  margin:0 5px;
+}
+
+#player button:hover{
+  transform: scale(1.1);
+}
+
+.player-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  flex-grow: 2;
+}
+
+.progress-bar, .volume-bar{
+  border-top: 3px solid lightgrey;
+}
+
+.progress-bar{
+  margin: auto 20px;
+  width: 50%;
+}
+
+.volume-bar{
+  width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 
 /* media query */
@@ -381,7 +440,7 @@ main .song-title>p.small-text{
     display: none;
   }
 
-  .sidebar-icon, #sidebar .container-flex>.flex-item:last-child>div:last-child>img{
+  .sidebar-icon, #sidebar .container-flex>.flex-item:nth-child(4)>.sidebar-item:last-child>img{
     width: 30px;
     margin: auto;
   }
@@ -398,15 +457,5 @@ main .song-title>p.small-text{
   #upgrade a{
     right: 80px;
   }
-
-}
-
-/* media query height */
-@media all and (max-height: 350px){
-
-  #sidebar .container-flex>.flex-item:last-child{
-    overflow-y: auto;
-  }
-
 
 }

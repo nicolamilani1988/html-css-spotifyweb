@@ -18,101 +18,94 @@
     <section id="sidebar">
 
       <div class="container-flex">
-        <!-- parte fissa in alto -->
-        <div class="flex-item">
-          <!-- logo -->
-          <div class="hidden-content-xs">
-            <a href="#">
-              <img src="./img/logo.svg" alt="spotify-logo">
-            </a>
-          </div>
-          <!-- prima navbar -->
-          <div>
-            <ul>
-              <!-- home -->
-              <li>
-                <a href="#" class="sidebar-item">
-                  <img src="./img/home.svg" alt="home-pic" class="sidebar-icon">
-                  <span class="hidden-content-xs">Home</span>
-                </a>
-              </li>
-              <!-- cerca -->
-              <li>
-                <a href="#" class="sidebar-item">
-                  <img src="./img/search.svg" alt="search-pic" class="sidebar-icon">
-                  <span class="hidden-content-xs">Search</span>
-                </a>
-              </li>
-              <!-- la tua libreria -->
-              <li>
-                <a href="#" class="sidebar-item">
-                  <img src="./img/libreria.svg" alt="library-pic" class="sidebar-icon">
-                  <span class="hidden-content-xs">La tua libreria</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- playlist -->
-          <div class="hidden-content-xs">
-            <div class="white-text text-big">
-              PLAYLIST
-            </div>
-            <a href="#" class="sidebar-item">
-              <i class="fas fa-plus"></i>
-              <span class="text-big">Crea playlist</span>
-            </a>
-          </div>
-          <!-- seconda navbar -->
-          <div class="hidden-content-xs">
-            <ul>
-              <li>
-                <a href="#" class="sidebar-item">
-                  Nuova playlist
-                </a>
-              </li>
-              <li>
-                <a href="#" class="sidebar-item">
-                  Nuova playlist
-                </a>
-              </li>
-              <li>
-                <a href="#" class="sidebar-item">
-                  Nuova playlist
-                </a>
-              </li>
-              <li>
-                <a href="#" class="sidebar-item">
-                  Nuova playlist
-                </a>
-              </li>
-              <li>
-                <a href="#" class="sidebar-item">
-                  Nuova playlist
-                </a>
-              </li>
-              <li>
-                <a href="#" class="sidebar-item">
-                  Nuova playlist
-                </a>
-              </li>
-              <li>
-                <a href="#" class="sidebar-item">
-                  Nuova playlist
-                </a>
-              </li>
-            </ul>
-          </div>
 
-          <div class="hidden-logo">
-            <a href="#">
-              <img src="./img/logo-small.svg" alt="spotify-logo-small" class="sidebar-icon">
-            </a>
+        <!-- logo -->
+        <div class="flex-item">
+          <a href="#" class="hidden-content-xs">
+            <img src="./img/logo.svg" alt="spotify-logo">
+          </a>
+        </div>
+
+        <!-- prima navbar -->
+        <div class="flex-item">
+          <ul>
+            <!-- home -->
+            <li>
+              <a href="#" class="sidebar-item">
+                <img src="./img/home.svg" alt="home-pic" class="sidebar-icon">
+                <span class="hidden-content-xs">Home</span>
+              </a>
+            </li>
+            <!-- cerca -->
+            <li>
+              <a href="#" class="sidebar-item">
+                <img src="./img/search.svg" alt="search-pic" class="sidebar-icon">
+                <span class="hidden-content-xs">Search</span>
+              </a>
+            </li>
+            <!-- la tua libreria -->
+            <li>
+              <a href="#" class="sidebar-item">
+                <img src="./img/libreria.svg" alt="library-pic" class="sidebar-icon">
+                <span class="hidden-content-xs">La tua libreria</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- titolo playlist -->
+        <div class="flex-item">
+          <div class="white-text text-big hidden-content-xs">
+            PLAYLIST
           </div>
+          <a href="#" class="sidebar-item hidden-content-xs">
+            <i class="fas fa-plus"></i>
+            <span class="text-big">Crea playlist</span>
+          </a>
+          <!-- seconda navbar con playlist -->
+          <ul class="hidden-content-xs">
+            <li>
+              <a href="#" class="sidebar-item">
+                Nuova playlist
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-item">
+                Nuova playlist
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-item">
+                Nuova playlist
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-item">
+                Nuova playlist
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-item">
+                Nuova playlist
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-item">
+                Nuova playlist
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-item">
+                Nuova playlist
+              </a>
+            </li>
+          </ul>
 
         </div>
-        <!-- parte fissa in basso -->
+
+        <!-- parte in basso -->
         <div class="flex-item">
-          <!-- logo -->
+          <!-- installa app -->
           <div>
             <a href="#" class="sidebar-item">
               <img src="./img/download.svg" alt="download-pic" class="sidebar-icon-small">
@@ -121,12 +114,19 @@
           </div>
 
           <hr class="hidden-content-xs">
-
+          <!-- nome utente -->
           <div class="text-big sidebar-item">
             <img src="./img/profile.svg" alt="profile-pic">
             <span class="white-text hidden-content-xs">John Doe</span>
           </div>
 
+        </div>
+
+        <!-- logo da far apparire in width xs -->
+        <div class="hidden-logo">
+          <a href="#">
+            <img src="./img/logo-small.svg" alt="spotify-logo-small" class="sidebar-icon">
+          </a>
         </div>
 
       </div>
@@ -420,19 +420,105 @@
 
     </main>
 
-
     <!-- player fisso in basso -->
     <section id="player">
-      <div class="container-flex-player">
-        <div>
+
+      <div class="container-flex">
+
+        <div class="flex-item">
+          <!-- immagine brano -->
+          <div>
+            <img src="./img/sinister.jpeg" alt="">
+          </div>
+          <!-- titolo brano -->
+          <div>
+            <p class="white-text">
+              Sinister
+            </p>
+            <p class="small-text">
+              Brano nome
+            </p>
+          </div>
 
         </div>
-        <div>
+
+        <!-- icone love + folder -->
+        <div class="flex-item">
+
+          <a href="#">
+            <i class="far fa-heart"></i>
+          </a>
+
+          <a href="#">
+            <i class="far fa-folder"></i>
+          </a>
 
         </div>
-        <div>
+
+        <!-- player centrale -->
+        <div class="flex-item">
+
+          <div class="player-command">
+
+            <button type="button" name="button" class="white-text">
+              <i class="fas fa-random"></i>
+            </button>
+
+            <button type="button" name="button" class="white-text">
+              <i class="fas fa-step-backward"></i>
+            </button>
+
+            <button type="button" name="button" class="white-text text-bigger">
+              <i class="far fa-play-circle"></i>
+            </button>
+
+            <button type="button" name="button" class="white-text">
+              <i class="fas fa-step-forward"></i>
+            </button>
+
+            <button type="button" name="button" class="white-text">
+              <i class="fas fa-redo-alt"></i>
+            </button>
+
+          </div>
+
+          <div class="player-bar">
+            <p class="small-text white-text">
+              0:25
+            </p>
+
+            <div class="progress-bar"></div>
+
+            <p class="small-text white-text">
+              4:35
+            </p>
+          </div>
 
         </div>
+
+
+        <div class="flex-item">
+
+          <div class="player-command">
+
+            <button type="button" name="button" class="small-text white-text">
+              <i class="fas fa-list"></i>
+            </button>
+
+            <button type="button" name="button" class="small-text white-text">
+              <i class="fas fa-desktop"></i>
+            </button>
+
+            <button type="button" name="button" class="small-text white-text">
+              <i class="fas fa-volume-up"></i>
+            </button>
+
+            <div class="volume-bar"></div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </section>
