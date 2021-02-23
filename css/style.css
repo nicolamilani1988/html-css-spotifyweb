@@ -148,7 +148,8 @@ main{
   position: fixed;
   top: 0;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.5);;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }
 
 #upgrade a{
@@ -224,18 +225,57 @@ main .container-flex{
   align-content: flex-start;
 }
 
-main .title-subtitle{
+main .section-title{
   padding: 20px;
 }
 
-main .container-flex>div{
+main .container-flex>.flex-item{
   flex-basis: calc((100% - 60px) / 6);
   flex-shrink: 1;
   margin-top: 20px;
   margin-right: 10px;
+
   /* debug */
-  height: 150px;
+  /* height: 150px; */
   border: 1px solid white;
+}
+
+main .container-flex>.flex-item a{
+  text-decoration: none;
+}
+
+main .content-pic{
+  position: relative;
+}
+
+main .content-pic>.layover{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+main .flex-item:hover .content-pic>.layover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .content-pic>.layover>i{
+  font-size: 50px;
+  color: white;
+}
+
+main .content-pic>img{
+  width:100%;
+}
+
+main .song-title{
+  text-align: center;
+  color: lightgrey;
 }
 
 
@@ -280,7 +320,7 @@ main .container-flex>div{
     flex-wrap: wrap;
   }
 
-  main .container-flex>div{
+  main .container-flex>.flex-item{
     flex-basis: calc((100% - 40px) / 4);
   }
 
@@ -294,7 +334,7 @@ main .container-flex>div{
     flex-basis: 30%;
   }
 
-  main .container-flex>div{
+  main .container-flex>.flex-item{
     flex-basis: calc((100% - 20px) / 2);
   }
 
@@ -316,7 +356,7 @@ main .container-flex>div{
     flex-basis: 25%;
   }
 
-  main .container-flex>div{
+  main .container-flex>.flex-item{
     flex-basis: calc((100% - 20px) / 2);
   }
 
