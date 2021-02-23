@@ -19,8 +19,9 @@ body{
   font-weight: 600;
 }
 
-h2{
+h1{
   color: white;
+  font-size: 1.5rem;
 }
 
 h4{
@@ -65,7 +66,7 @@ h4{
 
 
 #sidebar .container-flex>.flex-item:first-child>div:first-child img{
-  width: 90%;
+  width: 80%;
   margin: 0 0 20px 10px;
 }
 
@@ -139,7 +140,7 @@ h4{
 main{
   width: calc(100% - 200px);
   margin-left: 200px;
-  padding-top: 100px;
+  padding-top: 120px;
   overflow-y: scroll;
   height: calc(100vh - 100px);
   background-color:#141922;
@@ -159,7 +160,7 @@ main{
 #upgrade a{
   position: absolute;
   background-color: transparent;
-  right: 210px;
+  right: 230px;
   top: 20px;
   color: white;
   border: 1px solid white;
@@ -395,7 +396,7 @@ main .song-title>p.small-text{
   }
 
   #upgrade a{
-    right: 60px;
+    right: 80px;
   }
 
 }
