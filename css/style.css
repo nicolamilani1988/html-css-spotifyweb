@@ -414,6 +414,11 @@ main .song-title>p.small-text{
     flex-basis: calc((100% - 20px) / 2);
   }
 
+  #player .container-flex>.flex-item:nth-child(2){
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
 }
 
 
@@ -456,6 +461,10 @@ main .song-title>p.small-text{
 
   #upgrade a{
     right: 80px;
+  }
+
+  #player .container-flex>.flex-item:first-child img{
+    width: 30px;
   }
 
 }
