@@ -21,7 +21,6 @@ body{
 
 h2{
   color: white;
-  margin-top: 20px;
 }
 
 h4{
@@ -169,6 +168,20 @@ main{
   transform: scale(1.1);
 }
 
+#upgrade a:active .daft-punk img{
+  opacity: 1;
+}
+
+.daft-punk img{
+  width: 100px;
+  position: absolute;
+  top:50%;
+  left: calc(50% - 200px);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 1s;
+}
+
 
 /* regole seconda sezione main: main-nav */
 #main-nav ul{
@@ -204,14 +217,18 @@ main{
 
 
 /* regole terza sezione main */
-.container-flex-main{
+main .container-flex{
   display: flex;
   justify-content: flex-start;
-  margin: 0 20px;
+  margin: 0 20px 20px;
   align-content: flex-start;
 }
 
-.container-flex-main>div{
+main .title-subtitle{
+  padding: 20px;
+}
+
+main .container-flex>div{
   flex-basis: calc((100% - 60px) / 6);
   flex-shrink: 1;
   margin-top: 20px;
@@ -259,11 +276,11 @@ main{
     flex-basis: 20%;
   }
 
-  .container-flex-main{
+  main .container-flex{
     flex-wrap: wrap;
   }
 
-  .container-flex-main>div{
+  main .container-flex>div{
     flex-basis: calc((100% - 40px) / 4);
   }
 
@@ -273,12 +290,11 @@ main{
 /* media query small */
 @media all and (max-width: 992px) {
 
-
   #main-nav ul li{
     flex-basis: 30%;
   }
 
-  .container-flex-main>div{
+  main .container-flex>div{
     flex-basis: calc((100% - 20px) / 2);
   }
 
@@ -300,7 +316,7 @@ main{
     flex-basis: 25%;
   }
 
-  .container-flex-main>div{
+  main .container-flex>div{
     flex-basis: calc((100% - 20px) / 2);
   }
 
