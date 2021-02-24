@@ -370,7 +370,7 @@ main .song-title>p.small-text{
 }
 
 .volume-bar{
-  width: 150px;
+  width: 10vw;
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -402,7 +402,6 @@ main .song-title>p.small-text{
 .track-bar:hover .pallino, .volume-bar:hover .pallino{
   display: block;
 }
-
 
 
 
@@ -494,7 +493,4 @@ main .song-title>p.small-text{
     width: 30px;
   }
 
-  .volume-bar{
-    width: 100px;
-  }
 }
