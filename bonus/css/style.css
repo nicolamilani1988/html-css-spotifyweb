@@ -342,6 +342,7 @@ main .small-player:hover button i{
   bottom: 0;
   left:0;
   background-color: #282828;
+  z-index: 499;
 }
 
 #player .container-flex{
