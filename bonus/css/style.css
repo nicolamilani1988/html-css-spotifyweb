@@ -227,6 +227,15 @@ main{
   border-bottom: 2px solid #C8FF00;
 }
 
+#main-nav ul li a:active:after{
+  content:'';
+  position: absolute;
+  bottom: -2px;
+  left: calc((100% - 30px) / 2);
+  width: 30px;
+  border-bottom: 2px solid #C8FF00;
+}
+
 
 /* regole terza sezione main */
 main .container-flex{
@@ -465,7 +474,6 @@ main .small-player:hover button i{
   }
 
 }
-
 
 @keyframes pallinoplay {
 
