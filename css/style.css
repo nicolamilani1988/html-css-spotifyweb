@@ -93,6 +93,11 @@ body{
   padding-left: 10px;
 }
 
+.sidebar-item.active{
+  color:white;
+  border-left: 2px solid #C8FF00;
+}
+
 .sidebar-icon{
   width: 15%;
   margin-right: 5px;
