@@ -19,16 +19,6 @@ body{
   font-weight: 600;
 }
 
-h1{
-  color: white;
-  font-size: 1.5rem;
-}
-
-h4{
-  color: white;
-  margin-top: 20px;
-}
-
 .text-big{
   font-size: 1rem;
 }
@@ -37,14 +27,13 @@ h4{
   font-size: 1.5rem
 }
 
-.white-text{
-  color: white;
-}
-
 .small-text{
   font-size: 85%;
 }
 
+.white-text{
+  color: white;
+}
 
 
 /* regole sidebar */
@@ -52,7 +41,6 @@ h4{
   width: 200px;
   position: fixed;
   top: 0;
-  left: 0;
   background-color:black;
 }
 
@@ -137,7 +125,6 @@ h4{
   order: -1;
   padding-left: 10px;
 }
-
 
 
 /* regole generali main */
@@ -292,8 +279,7 @@ main .song-title>p.small-text{
 }
 
 #popular .content-pic img,
-#popular .content-pic .layover
-{
+#popular .content-pic .layover{
   border-radius: 50%;
 }
 
@@ -319,7 +305,7 @@ main .song-title>p.small-text{
   /* debug */
   /* width: 100px; */
   /* height: 50px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #player .container-flex>.flex-item:first-child{
@@ -339,6 +325,10 @@ main .song-title>p.small-text{
   color: inherit;
   text-decoration: none;
   margin-right: 15px;
+}
+
+#player .container-flex>.flex-item:nth-child(2) a:hover{
+  color: white;
 }
 
 #player .container-flex>.flex-item:nth-child(3){
@@ -467,4 +457,7 @@ main .song-title>p.small-text{
     width: 30px;
   }
 
+  .volume-bar{
+    width: 100px;
+  }
 }
