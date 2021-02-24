@@ -51,6 +51,10 @@ body{
   padding: 10px 10px 10px 0;
 }
 
+/* #sidebar .container-flex>.flex-item:nth-child(2){
+overflow-y: auto;
+} */
+
 #sidebar .container-flex>.flex-item:nth-child(3){
   margin-top: 20px;
   flex-grow: 1;
@@ -59,7 +63,6 @@ body{
 
 #sidebar .container-flex>.flex-item:nth-child(3)>ul{
     overflow-y: scroll;
-    min-height: 100%;
 }
 
 
