@@ -54,8 +54,14 @@ body{
 #sidebar .container-flex>.flex-item:nth-child(3){
   margin-top: 20px;
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
+
+#sidebar .container-flex>.flex-item:nth-child(3)>ul{
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
 
 #sidebar .container-flex>.flex-item:first-child img{
   width: 80%;
@@ -353,20 +359,51 @@ main .song-title>p.small-text{
   flex-grow: 2;
 }
 
-.progress-bar, .volume-bar{
-  border-top: 3px solid lightgrey;
+.track-bar, .volume-bar{
+  border-top: 3px solid grey;
 }
 
-.progress-bar{
+.track-bar{
   margin: auto 20px;
   width: 50%;
+  position: relative;
 }
 
 .volume-bar{
   width: 150px;
   display: inline-block;
   vertical-align: middle;
+  position: relative;
 }
+
+.progress-bar{
+  border-top: 3px solid white;
+  width: 30%;
+  position: absolute;
+  top:-3px;
+}
+
+.pallino{
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  position: absolute;
+  top: -9px;
+  left: 30%;
+  border-radius: 50%;
+  transform: translate(-50% , 0);
+  display: none;
+}
+
+.track-bar:hover .progress-bar, .volume-bar:hover .progress-bar{
+  border-top: 3px solid #C8FF00;
+}
+
+.track-bar:hover .pallino, .volume-bar:hover .pallino{
+  display: block;
+}
+
+
 
 
 /* media query */
