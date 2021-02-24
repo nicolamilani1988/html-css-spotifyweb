@@ -446,6 +446,39 @@ main .small-player:hover button i{
   display: block;
 }
 
+.track-bar:active .progress-bar, .volume-bar:active .progress-bar{
+  animation: play 2s linear;
+}
+
+.track-bar:active .pallino, .volume-bar:active .pallino{
+  animation: pallinoplay 2s linear;
+}
+
+@keyframes play {
+
+  0%{
+    width:30%;
+  }
+
+  100%{
+    width:100%;
+  }
+
+}
+
+
+@keyframes pallinoplay {
+
+  0%{
+    left: 30%;
+  }
+
+  100%{
+    left: 100%;
+  }
+
+}
+
 
 
 /* media query */
