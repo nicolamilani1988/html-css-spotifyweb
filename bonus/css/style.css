@@ -298,6 +298,30 @@ main .song-title>p.small-text{
   border-radius: 50%;
 }
 
+main .small-player{
+  width: 50px;
+  margin: auto;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: none;
+}
+
+main .small-player button{
+  color: white;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .small-player:hover button i{
+  transform: scale(1.1);
+}
+
 
 /* regole player */
 #player{
@@ -437,13 +461,13 @@ main .song-title>p.small-text{
     flex-basis: 20%;
   }
 
-  main .container-flex{
-    flex-wrap: wrap;
-  }
+  /* main .container-flex{
+    flex-wrap: nowrap;
+  } */
 
-  main .container-flex>.flex-item{
+  /* main .container-flex>.flex-item{
     flex-basis: calc((100% - 40px) / 4);
-  }
+  } */
 
 }
 
@@ -455,9 +479,19 @@ main .song-title>p.small-text{
     flex-basis: 30%;
   }
 
-  main .container-flex>.flex-item{
+  /* main .container-flex>.flex-item{
     flex-basis: calc((100% - 20px) / 2);
+  } */
+
+  main .container-flex>.flex-item .content-pic{
+    display: none;
   }
+
+  main .small-player{
+    display: block;
+  }
+
+
 
   #player .container-flex>.flex-item:nth-child(2){
     flex-direction: column;
@@ -480,10 +514,6 @@ main .song-title>p.small-text{
 
   #main-nav ul li{
     flex-basis: 25%;
-  }
-
-  main .container-flex>.flex-item{
-    flex-basis: calc((100% - 20px) / 2);
   }
 
   .hidden-content-xs{
