@@ -116,8 +116,12 @@ body{
   margin-right: 5px;
 }
 
-#sidebar a:hover{
+#sidebar a.sidebar-item:hover{
   color:white;
+}
+
+#sidebar .container-flex>.flex-item:nth-child(3) a:hover i{
+  background-color: white;
 }
 
 #sidebar a.sidebar-item:active{
@@ -214,7 +218,7 @@ main{
   color:white;
 }
 
-#main-nav ul li a:hover:after{
+#main-nav ul li a.active:after{
   content:'';
   position: absolute;
   bottom: -2px;
@@ -330,6 +334,16 @@ main .song-title>p.small-text{
 #player .container-flex>.flex-item:first-child img{
   width: 50px;
   margin-right: 10px;
+}
+
+#player .container-flex>.flex-item:first-child a{
+  color:inherit;
+  text-decoration: none;
+}
+
+#player .container-flex>.flex-item:first-child a:hover{
+  color:white;
+  text-decoration: underline;
 }
 
 #player .container-flex>.flex-item:nth-child(2) a{
