@@ -26,22 +26,51 @@ main .flex-container>section:first-child{
   background-color: red;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 0;
   flex-shrink: 0;
 }
 
 #sidebar>*{
+  padding: 5px 0;
+  /* debug */
   border: 1px solid black;
-  flex-basis: 50px;
+  /* flex-basis: 50px; */
+}
+
+#sidebar li img{
+  width: 30px;
+}
+
+#sidebar a, #sidebar>div:last-child>div:last-child{
+  padding:5px;
+  display: flex;
+  align-items: center;
+}
+
+#sidebar li:hover,
+#sidebar>div:last-child>div:first-child:hover{
+  border-left: 2px solid green;
 }
 
 #sidebar>div:nth-child(3){
   flex-grow: 1;
+  overflow-y: auto;
+}
+
+#sidebar .playlist-create{
+  display: flex;
+  align-items: center;
+}
+
+#sidebar .playlist-create>i{
+  background-color: white;
+  color: black;
+  font-size: 30px;
 }
 
 #sidebar .line{
-  border-top: 1px solid black;
-  margin-top: 5px;
+  border-top: 1px solid lightgrey;
+  margin: 5px;
 }
 
 
