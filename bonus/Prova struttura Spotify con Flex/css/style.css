@@ -1,0 +1,42 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* regole totali main */
+main .flex-container{
+  display: flex;
+  height: calc(100vh - 100px);
+  background-color: green;
+}
+
+/* regole sidebar */
+main .flex-container>section:first-child{
+  width: 200px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar>div, #sidebar>nav {
+  border: 1px solid black;
+  flex-basis: 50px;
+  width: 200px;
+}
+
+
+
+
+/* regole parte centrale */
+main .flex-container>section:last-child{
+  flex-grow: 1;
+  background-color: yellow;
+}
+
+
+/* regole player */
+footer{
+  background-color: blue;
+  height: 100px;
+}
