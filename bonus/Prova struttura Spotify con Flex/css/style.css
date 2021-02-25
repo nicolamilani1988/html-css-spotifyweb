@@ -53,8 +53,6 @@ main .flex-container>section:last-child{
 }
 
 
-
-
 /* regole barra upgrade */
 #central-body>div:first-child{
   min-height: 100px;
@@ -69,12 +67,14 @@ main .flex-container>section:last-child{
 }
 
 
-/* regole nav in alto */
+/* regola generale scroll nav+contenuti */
 #central-body>div:last-child{
   flex-grow: 1;
   overflow-y: auto;
 }
 
+
+/* regole nav in alto */
 #central-body>div:last-child>nav>ul{
   margin-top: 120px;
   display: flex;
@@ -102,20 +102,17 @@ main .flex-container>section:last-child{
 }
 
 #central-body>div:last-child .row ul li{
-  margin-right: 10px;
   list-style-type: none;
   border: 1px solid green;
   text-align: center;
-  flex-basis: calc((100% - 60px) / 6);
+  flex-basis: calc(100%  / 6);
+  padding: 10px;
 }
 
 #central-body>div:last-child .row ul li>div,
 #central-body .row ul li>div img{
   width: 100%;
 }
-
-
-
 
 
 /* regole player */
