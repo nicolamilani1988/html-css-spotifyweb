@@ -4,11 +4,16 @@
   box-sizing: border-box;
 }
 
+body{
+  color:white;
+}
+
 /* regole totali main */
 main .flex-container{
   display: flex;
   height: calc(100vh - 100px);
   background-color: green;
+  overflow-y: hidden;
 }
 
 /* regole sidebar */
@@ -17,26 +22,105 @@ main .flex-container>section:first-child{
   background-color: red;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  flex-shrink: 0;
 }
 
-#sidebar>div, #sidebar>nav {
+#sidebar>*{
   border: 1px solid black;
   flex-basis: 50px;
-  width: 200px;
 }
 
+#sidebar>div:nth-child(3){
+  flex-grow: 1;
+}
+
+#sidebar .line{
+  border-top: 1px solid black;
+  margin-top: 5px;
+}
 
 
 
 /* regole parte centrale */
+/* regole generali */
 main .flex-container>section:last-child{
   flex-grow: 1;
-  background-color: yellow;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
+
+
+
+
+/* regole barra upgrade */
+#central-body>div:first-child{
+  min-height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid red;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+}
+
+
+/* regole nav in alto */
+#central-body>div:last-child{
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#central-body>div:last-child>nav>ul{
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#central-body>div:last-child>nav>ul li{
+  list-style-type: none;
+  border: 1px solid black;
+  background-color: pink;
+  margin: 0 20px 20px 0;
+}
+
+
+/* regole contenuti centrali */
+#central-body>div:last-child .row{
+  padding: 20px;
+  border: 1px solid black;
+}
+
+#central-body>div:last-child .row ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#central-body>div:last-child .row ul li{
+  margin-right: 10px;
+  list-style-type: none;
+  border: 1px solid green;
+  text-align: center;
+  flex-basis: calc((100% - 60px) / 6);
+}
+
+#central-body>div:last-child .row ul li>div,
+#central-body .row ul li>div img{
+  width: 100%;
+}
+
+
+
 
 
 /* regole player */
 footer{
   background-color: blue;
   height: 100px;
+  z-index: 9;
 }
