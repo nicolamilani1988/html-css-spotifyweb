@@ -48,11 +48,13 @@ body{
   display: flex;
   flex-direction: column;
   height: calc(100vh - 100px);
-  padding: 10px 10px 10px 0;
+}
+
+#sidebar .container-flex .flex-item{
+  padding-top: 20px;
 }
 
 #sidebar .container-flex>.flex-item:nth-child(3){
-  margin-top: 20px;
   flex-grow: 1;
   overflow-y: hidden;
 }
@@ -62,15 +64,8 @@ body{
     min-height: 100%;
 }
 
-
 #sidebar .container-flex>.flex-item:first-child img{
   width: 80%;
-  margin: 0 0 20px 10px;
-}
-
-#sidebar .container-flex>.flex-item:nth-child(3)>.white-text.text-big,
-#sidebar hr{
-  margin-left: 10px;
 }
 
 #sidebar .container-flex>.flex-item:nth-child(3) a i{
@@ -106,6 +101,12 @@ body{
 .sidebar-icon-small{
   width: 10%;
   margin-right: 5px;
+}
+
+#sidebar .horizontal-separator{
+  width: calc(100% - 20px);
+  margin: auto;
+  border-top: 1px solid lightgrey;
 }
 
 #sidebar .container-flex>.flex-item:nth-child(4)>.sidebar-item:last-child>img{
@@ -155,7 +156,7 @@ main{
 
 /* regole prima sezione main: upgrade */
 #upgrade{
-  width: 100%;
+  width: calc(100% - 200px);
   position: fixed;
   top: 0;
   height: 100px;
@@ -166,7 +167,7 @@ main{
 #upgrade a{
   position: absolute;
   background-color: transparent;
-  right: 230px;
+  right: 30px;
   top: 20px;
   color: white;
   border: 1px solid white;
@@ -218,19 +219,16 @@ main{
 main .container-flex{
   display: flex;
   justify-content: flex-start;
-  margin: 0 20px 20px;
-  align-content: flex-start;
-}
-
-main .section-title{
   padding: 20px;
 }
 
+main .section-title{
+  margin-left: 30px;
+}
+
 main .container-flex>.flex-item{
-  flex-basis: calc((100% - 60px) / 6);
-  flex-shrink: 1;
-  margin-top: 20px;
-  margin-right: 10px;
+  flex-basis: calc(100% / 6);
+  padding: 10px;
   /* debug */
   /* height: 150px; */
   /* border: 1px solid white; */
@@ -428,7 +426,7 @@ main .song-title>p.small-text{
   }
 
   main .container-flex>.flex-item{
-    flex-basis: calc((100% - 40px) / 4);
+    flex-basis: calc(100% / 4);
   }
 
 }
@@ -442,7 +440,7 @@ main .song-title>p.small-text{
   }
 
   main .container-flex>.flex-item{
-    flex-basis: calc((100% - 20px) / 2);
+    flex-basis: calc(100% / 2);
   }
 
   #player .container-flex>.flex-item:nth-child(2){
@@ -457,6 +455,14 @@ main .song-title>p.small-text{
 @media all and (max-width: 768px) {
   #sidebar{
     width: 50px;
+  }
+
+  #sidebar .container-flex .flex-item{
+    padding-top: 0;
+  }
+
+  .sidebar-item{
+    padding-left: 0;
   }
 
   main{
@@ -490,9 +496,9 @@ main .song-title>p.small-text{
     display: block;
   }
 
-  #upgrade a{
-    right: 80px;
-  }
+ #upgrade{
+   width: calc(100% - 50px);
+ }
 
   #player .container-flex>.flex-item:first-child img{
     width: 30px;
