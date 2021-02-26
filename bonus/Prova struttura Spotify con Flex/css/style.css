@@ -14,6 +14,10 @@ ul li{
   list-style-type: none;
 }
 
+.big-text{
+  font-size: 1.5rem;
+}
+
 /* regole totali main */
 main .flex-container{
   display: flex;
@@ -147,7 +151,6 @@ main .flex-container>section:last-child{
 
 #central-body>div:first-child a:hover{
   transform: scale(1.1);
-  background-color: red;
 }
 
 
@@ -208,13 +211,35 @@ main .flex-container>section:last-child{
   list-style-type: none;
   border: 1px solid #C8FF00;
   text-align: center;
-  flex-basis: calc(100%  / 6);
+  flex-basis: calc(100% / 6);
   padding: 10px;
+}
+
+#central-body>div:last-child .row ul li>div{
+  position: relative;
+}
+
+#central-body>div:last-child .row ul li>div i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  display: none;
+}
+
+#central-body>div:last-child .row ul li>div:hover>*{
+  display: inline-block;
+  filter: grayscale(0.8);
 }
 
 #central-body>div:last-child .row ul li>div,
 #central-body .row ul li>div img{
   width: 100%;
+}
+
+#central-body>div:last-child .row:last-child li>div img{
+  border-radius: 50%;
 }
 
 
@@ -230,37 +255,41 @@ footer{
 }
 
 .progress{
-  width: 40vw;
+  width: 30vw;
   margin: 0 10px;
   border-top: 3px solid gray;
 }
 
 .progress-small{
-  width: 10vw;
+  width: 5vw;
   margin: 0 10px;
   border-top: 3px solid gray;
 }
 
 footer>div{
+  /* debug */
   /* width: 300px;
   height: 50px; */
   border: 1px solid red;
 }
 
-footer>div:first-child{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
+footer>div:first-child,
 footer>div:first-child>div:first-child{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+footer>div:first-child>div:last-child{
+  margin-left: 1vw;
+}
+
 footer img{
   width: 50px;
+}
+
+footer i{
+  padding: 0 5px;
 }
 
 footer>div:nth-child(2){
@@ -273,10 +302,15 @@ footer>div:nth-child(2)>div:first-child{
   text-align: center;
 }
 
+footer>div:nth-child(2)>div:first-child i:hover{
+  transform: scale(1.2);
+}
+
 footer>div:nth-child(2)>div:nth-child(2){
   display: flex;
   align-items: center;
   flex-grow: 2;
+  margin-top: 10px;
 }
 
 footer>div:last-child{
@@ -298,5 +332,9 @@ footer>div:last-child{
 
   #sidebar .hidden-content-xs{
     display: none;
+  }
+
+  footer img{
+    width: 30px;
   }
 }
