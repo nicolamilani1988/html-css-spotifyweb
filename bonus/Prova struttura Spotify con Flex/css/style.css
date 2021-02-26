@@ -24,7 +24,6 @@ main .flex-container{
 
 /* regole sidebar */
 main .flex-container>section:first-child{
-  width: 200px;
   background-color: red;
   display: flex;
   flex-direction: column;
@@ -42,6 +41,10 @@ main .flex-container>section:first-child{
 #sidebar a{
   color: white;
   text-decoration: none;
+}
+
+#sidebar>div:first-child>a:first-child img{
+  width: 80%;
 }
 
 #sidebar li img, #sidebar>div:first-child>a:last-child img {
@@ -82,6 +85,7 @@ main .flex-container>section:first-child{
 #sidebar .line{
   border-top: 1px solid lightgrey;
   margin: 5px;
+  width: 200px;
 }
 
 #sidebar>div:last-child img.small-icon{
@@ -251,7 +255,6 @@ footer>div:last-child{
 /* media query */
 @media all and (max-width: 576px) {
   main .flex-container>section:first-child{
-    width: 50px;
     align-items:center;
   }
 
