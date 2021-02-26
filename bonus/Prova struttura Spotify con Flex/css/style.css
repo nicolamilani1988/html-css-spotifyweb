@@ -18,7 +18,7 @@ ul li{
 main .flex-container{
   display: flex;
   height: calc(100vh - 100px);
-  background-color: green;
+  background-color: #C8FF00;
   overflow-y: hidden;
 }
 
@@ -63,7 +63,7 @@ main .flex-container>section:first-child{
 
 #sidebar li:hover,
 #sidebar>div:last-child>div:first-child:hover{
-  border-left: 2px solid green;
+  border-left: 2px solid #C8FF00;
 }
 
 #sidebar>div:nth-child(3){
@@ -132,6 +132,22 @@ main .flex-container>section:last-child{
   justify-content: flex-end;
   position: absolute;
   top: 0;
+  text-transform: uppercase;
+}
+
+#central-body>div:first-child a{
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#central-body>div:first-child a:hover{
+  transform: scale(1.1);
+  background-color: red;
 }
 
 
@@ -153,9 +169,23 @@ main .flex-container>section:last-child{
 #central-body>div:last-child>nav>ul li{
   list-style-type: none;
   border: 1px solid black;
-  background-color: pink;
   margin: 0 20px 20px 0;
-  padding: 10px;
+  text-transform: uppercase;
+}
+
+#central-body>div:last-child>nav>ul li a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+#central-body>div:last-child>nav>ul li a.active:after{
+  content:'';
+  position: absolute;
+  bottom: -3px;
+  left: calc(50% - 15px);
+  width: 30px;
+  border-bottom: 2px solid #C8FF00;
 }
 
 
@@ -165,6 +195,10 @@ main .flex-container>section:last-child{
   border: 1px solid black;
 }
 
+#central-body>div:last-child .row>div:first-child{
+  padding-bottom: 20px;
+}
+
 #central-body>div:last-child .row ul{
   display: flex;
   flex-wrap: wrap;
@@ -172,7 +206,7 @@ main .flex-container>section:last-child{
 
 #central-body>div:last-child .row ul li{
   list-style-type: none;
-  border: 1px solid green;
+  border: 1px solid #C8FF00;
   text-align: center;
   flex-basis: calc(100%  / 6);
   padding: 10px;
