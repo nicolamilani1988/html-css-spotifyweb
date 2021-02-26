@@ -32,7 +32,6 @@ main .flex-container>section:first-child{
   display: flex;
   flex-direction: column;
   padding: 10px 0;
-  flex-shrink: 0;
 }
 
 #sidebar>*{
