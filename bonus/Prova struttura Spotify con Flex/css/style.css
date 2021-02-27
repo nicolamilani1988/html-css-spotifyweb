@@ -136,6 +136,7 @@ main .flex-container>section:last-child{
   position: absolute;
   top: 0;
   text-transform: uppercase;
+  z-index:9;
 }
 
 #central-body>div:first-child a{
@@ -257,12 +258,41 @@ footer{
   width: 30vw;
   margin: 0 10px;
   border-top: 3px solid gray;
+  position: relative;
 }
 
 .progress-small{
   width: 5vw;
   margin: 0 10px;
   border-top: 3px solid gray;
+  position: relative;
+}
+
+.avanzamento{
+  position: absolute;
+  border-top: 3px solid white;
+  width: 4vw;
+  top: -3px;
+}
+
+.pallino{
+  position: absolute;
+  left: calc(4vw - 7.5px);
+  top: -9px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  color: white;
+  display: none;
+}
+
+.progress:hover .avanzamento, .progress-small:hover .avanzamento{
+  border-top: 3px solid yellow;
+}
+
+.progress:hover .pallino, .progress-small:hover .pallino{
+  display: block;
 }
 
 footer>div{
@@ -301,7 +331,8 @@ footer>div:nth-child(2)>div:first-child{
   text-align: center;
 }
 
-footer>div:nth-child(2)>div:first-child i:hover{
+footer>div:nth-child(2) i:hover,
+footer>div:last-child i:hover{
   transform: scale(1.2);
 }
 
