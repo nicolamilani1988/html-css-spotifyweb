@@ -192,7 +192,7 @@
       <section id="recently">
 
         <div class="section-title">
-          <div class="text-bigger white-text">
+          <div id="titolo-sezione-uno" class="text-bigger white-text">
             <strong>Recently played</strong>
           </div>
         </div>
@@ -327,7 +327,7 @@
       <section id="customized">
 
         <div class="section-title">
-          <div class="text-bigger white-text">
+          <div id="titolo-sezione-due" class="text-bigger white-text">
             <strong>Creato per John Doe</strong>
           </div>
           <p>
@@ -380,7 +380,7 @@
       <section id="popular">
 
         <div class="section-title">
-          <div class="text-bigger white-text">
+          <div id="titolo-sezione-tre" class="text-bigger white-text">
             <strong>Artisti più popolari</strong>
           </div>
           <p>
@@ -544,6 +544,15 @@
       </div>
 
     </section>
+
+    <script type="text/javascript">
+
+    alert("Hello, I'm your first alert");
+    document.getElementById('titolo-sezione-uno').innerHTML='Recently played by JS';
+    document.getElementById('titolo-sezione-due').innerHTML='Creato per John Doe by JS';
+    document.getElementById('titolo-sezione-tre').innerHTML='Artisti più popolari by JS';
+
+    </script>
 
   </body>
 
